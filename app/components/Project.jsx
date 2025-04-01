@@ -48,7 +48,7 @@ const Project = ({isDarkMode}) => {
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">Bootstrap</span>
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">Json</span>
                     </div>
-                    <a href="https://www.google.com" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
+                    <a href="https://sivanandham-k.github.io/Justbuy/index.html" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@ const Project = ({isDarkMode}) => {
                         Description
                     </h4>
                     <p className='text-gray-600 mt-2 text-justify dark:text-white/80'>
-                        This e-commerce website is a fully functional online store built using HTML, CSS, JavaScript, Bootstrap, and JSON. It offers a seamless shopping experience with a user-friendly interface, making it easy for customers to browse and purchase products.
+                    A modern and responsive portfolio website built with React.js and Tailwind CSS, featuring seamless dark mode and light mode functionality. Designed for an elegant user experience, the website showcases projects, skills, and professional information in a clean, minimalistic layout. With smooth transitions and a fully responsive design, it ensures an engaging experience across all devices.
                     </p>
                 </div>
                 <div className={`w-full md:w-2/5 p-5 hover:bg-lightHover dark:hover:shadow-white dark:hover:bg-darkHover dark:bg-darkTheme dark:border dark:border-gray-400 hidden lg:block md:block`}>
@@ -71,7 +71,7 @@ const Project = ({isDarkMode}) => {
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">Tailwind css</span>
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">React Js</span>
                     </div>
-                    <a href="https://www.google.com" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
+                    <a href="https://sivanandham-k.netlify.app/" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
                 </div>
                 <div className="relative md:w-3/5">
                     <Image src={assets.portfolio} alt='' className="w-full h-full object-cover" />
@@ -94,7 +94,7 @@ const Project = ({isDarkMode}) => {
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">Tailwind css</span>
                         <span className="bg-gray-300 px-3 py-2 rounded text-sm dark:text-black/80">React Js</span>
                     </div>
-                    <a href="https://www.google.com" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
+                    <a href="https://sivanandham-k.netlify.app/" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
                 </div>
             </div>
         </div>
