@@ -1,24 +1,45 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import React, { useState } from 'react'
+import { motion } from "motion/react"
 
-const Project = ({isDarkMode}) => {
+const Project = ({ isDarkMode }) => {
 
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
 
     return (
-        <div className='flex flex-col justify-center items-center p-4 my-7' id='work'>
-            <h4 className='text-center mb-2 text-lg mt-7'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='flex flex-col justify-center items-center p-4 my-7' id='work'>
+            <motion.h4
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className='text-center mb-2 text-lg mt-7'>
                 My Portfolio
-            </h4>
-            <h2 className='text-center text-5xl'>
+            </motion.h4>
+            <motion.h2
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className='text-center text-5xl'>
                 My latest work
-            </h2>
-            <p className='text-center max-w-2xl mx-auto mt-5 mb-12'>
+            </motion.h2>
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className='text-center max-w-2xl mx-auto mt-5 mb-12'>
                 Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front end development
-            </p>
-            <div onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className="flex flex-wrap w-11/12 max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-black my-7">
+            </motion.p>
+            <motion.div
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+                transition={{ duration: 0.8}}
+                onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)} className="flex flex-wrap w-11/12 max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-black my-7">
                 <div className={`p-5 top-0 bg-white h-full w-full text-center text-black dark:bg-darkTheme dark:border dark:border-gray-400 block lg:hidden`}>
                     <h4 className='mb-5 text-xl font-bold dark:text-white'>
                         Description
@@ -50,15 +71,19 @@ const Project = ({isDarkMode}) => {
                     </div>
                     <a href="https://sivanandham-k.github.io/Justbuy/index.html" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
                 </div>
-            </div>
+            </motion.div>
 
-            <div onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className="flex my-7 flex-wrap w-11/12 max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-black">
+            <motion.div
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+                transition={{ duration: 0.6, delay: 0.8}}
+                onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)} className="flex my-7 flex-wrap w-11/12 max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-black">
                 <div className={`p-5 top-0 bg-white h-full w-full text-center text-black dark:bg-darkTheme dark:border dark:border-gray-400 block lg:hidden`}>
                     <h4 className='mb-5 text-xl font-bold dark:text-white'>
                         Description
                     </h4>
                     <p className='text-gray-600 mt-2 text-justify dark:text-white/80'>
-                    A modern and responsive portfolio website built with React.js and Tailwind CSS, featuring seamless dark mode and light mode functionality. Designed for an elegant user experience, the website showcases projects, skills, and professional information in a clean, minimalistic layout. With smooth transitions and a fully responsive design, it ensures an engaging experience across all devices.
+                        A modern and responsive portfolio website built with React.js and Tailwind CSS, featuring seamless dark mode and light mode functionality. Designed for an elegant user experience, the website showcases projects, skills, and professional information in a clean, minimalistic layout. With smooth transitions and a fully responsive design, it ensures an engaging experience across all devices.
                     </p>
                 </div>
                 <div className={`w-full md:w-2/5 p-5 hover:bg-lightHover dark:hover:shadow-white dark:hover:bg-darkHover dark:bg-darkTheme dark:border dark:border-gray-400 hidden lg:block md:block`}>
@@ -96,8 +121,8 @@ const Project = ({isDarkMode}) => {
                     </div>
                     <a href="https://sivanandham-k.netlify.app/" className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded">Check it</a>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

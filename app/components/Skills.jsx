@@ -1,23 +1,44 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
+import { motion } from "motion/react"
 
-const Skills = ({isDarkMode}) => {
+const Skills = ({ isDarkMode }) => {
     return (
-        <div id='skill' className='mt-7'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            id='skill' className='mt-7'>
 
-            <h4 className='text-center mb-2 text-lg'>
+            <motion.h4
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className='text-center mb-2 text-lg'>
                 What are the tools i know
-            </h4>
-            <h2 className='text-center text-5xl mb-5'>
+            </motion.h4>
+            <motion.h2
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className='text-center text-5xl mb-5'>
                 Skills
-            </h2>
+            </motion.h2>
 
-            <p className='text-center max-w-2xl mx-auto mt-5 mb-12'>
-            I specialize in full-stack development, creating dynamic and responsive web applications. My technical expertise spans across front-end and back-end technologies, ensuring seamless and efficient digital solutions.
-            </p>
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className='text-center max-w-2xl mx-auto mt-5 mb-12'>
+                I specialize in full-stack development, creating dynamic and responsive web applications. My technical expertise spans across front-end and back-end technologies, ensuring seamless and efficient digital solutions.
+            </motion.p>
 
-            <div className="flex flex-col items-center justify-center bg-transparent p-5">
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="flex flex-col items-center justify-center bg-transparent p-5">
                 <div className="flex flex-wrap justify-center gap-4 max-w-xl mx-auto">
                     <div className="flex skill flex-col items-center justify-center w-20 h-24 rounded-lg border-2 border-gray-400 bg-transparent shadow-md p-2" >
                         <Image alt='' src={isDarkMode ? assets.html_light : assets.html_dark} className="w-12 h-12" />
@@ -68,9 +89,9 @@ const Skills = ({isDarkMode}) => {
                         <span className="mt-1 text-xs font-bold text-gray-700 dark:text-white/80">MySQL</span>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-        </div>
+        </motion.div>
     )
 }
 
