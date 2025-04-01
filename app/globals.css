@@ -7,7 +7,7 @@
 }
 @media screen and (max-width: 600px) {
   .profile{
-    margin-top: 15dvh;
+    margin-top: 5dvh;
   }
   .hiddens{
     display: none !important;
